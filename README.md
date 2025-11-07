@@ -13,6 +13,7 @@ Tech Stack
 - MongoDB Memory Server — in-memory MongoDB for testing (no external DB required)
 - Mongoose — ODM for MongoDB
 - Jest + Supertest — testing framework
+- Postman (v2.1) — API testing collection
 
 ----------------------------------------------------
 How to Run
@@ -27,6 +28,16 @@ How to Run
 3. Run tests:
    npm test
    (Runs automated tests under /tests)
+
+4. Import API collection (optional):
+   You can test all endpoints easily using Postman by importing the provided file:
+   **Boo Server API (Postman v2.1).json**
+
+   This collection includes ready-to-use requests for:
+   - User creation and listing
+   - Profile creation and retrieval
+   - Comment posting, filtering, sorting, and like/unlike
+   - Voting and retrieving aggregated votes
 
 ----------------------------------------------------
 Features Implemented
@@ -56,6 +67,7 @@ Part 3 — Automated Tests
 ----------------------------------------------------
 Project Structure
 ----------------------------------------------------
+```
 .
 ├── app.js
 ├── db/
@@ -72,15 +84,26 @@ Project Structure
 │   └── votes.js
 ├── tests/
 │   ├── profiles.test.js
+│   ├── users.test.js
 │   ├── comments.test.js
 │   └── votes.test.js
 ├── views/
-│   └── profile_template.ejs
+│   ├── profile_template.ejs
+│   └── partials/
+│       ├── header.ejs
+│       ├── footer.ejs
+│       ├── scripts.ejs
+│       └── styles.ejs
 ├── public/
 │   └── static/
+│       ├── space.png
+│       └── wing.png
+├── Boo Server API (Postman v2.1).json
 ├── package.json
+├── package-lock.json
+├── .gitignore
 └── README.txt
-
+```
 ----------------------------------------------------
 Notes
 ----------------------------------------------------
@@ -88,6 +111,6 @@ Notes
 - No authentication or image uploads needed (static avatar reused).
 - All routes are public for simplicity per instructions.
 - Tests must pass (npm test) before submission.
+- Postman collection provided for easy manual API testing.
 
-© 2025 — Backend assessment project by [Your Name]
-# boo-server
+© 2025 — Backend assessment project by Aldi Setiawan
