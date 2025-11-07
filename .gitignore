@@ -1,0 +1,25 @@
+# Node.js dependencies
+node_modules/
+npm-debug.log
+yarn-debug.log*
+yarn-error.log*
+
+# Environment
+.env
+.DS_Store
+
+# Test coverage / build outputs
+coverage/
+dist/
+build/
+
+# Logs
+*.log
+logs/
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# OS-specific
+Thumbs.db
